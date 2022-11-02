@@ -68,10 +68,10 @@ h2 {
    letter-spacing: 0.02em;
    color: var(--main-color);
    text-decoration: none;
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation:hover, .navigation:focus {
     color: var(--brand-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .top-contact {
     font-weight: 500;
@@ -80,7 +80,8 @@ h2 {
     letter-spacing: 0.02em;
     color: var(--extra-gray);
     text-decoration: none;
-
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     display: inline-block;
     align-items: center;
@@ -88,18 +89,16 @@ h2 {
 .icon-top-contact {
     margin-right: 10px;
     fill: var(--extra-gray);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-top-contact:hover , .icon-top-contact:focus {
     fill: var(--brand-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .top-contact:hover, .top-contact:focus, .lower-contact:hover, .lower-contact:focus {
-    color: var(--brand-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--brand-color);  
 }
 .top-contact:hover .icon-top-contact {
     fill: var(--brand-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .color-logo {
     font-family: 'Raleway';
@@ -210,13 +209,12 @@ h2 {
     background-color: var(--main-white);
     fill: var(--social-network);
     padding-top: 12px;
+    transition: fill, background-color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .profession-inner:hover {
     background-color: var(--brand-color);
     fill: var(--main-white);
     cursor: pointer;
-    transition: fill, background-color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
 }
 .portfolio-title {
     font-weight: 700;
@@ -261,12 +259,12 @@ h2 {
     border-radius: 4px;
     border: none;
     padding: 6px 22px;
+    transition: color, background-color, box-shadow, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .services:hover, .services:focus {
     color: var(--main-white);
     background-color: var(--brand-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: color, background-color, box-shadow, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .lower-contact {
     text-decoration: none;
@@ -338,10 +336,10 @@ h2 {
 }
 .gallery-item {
     flex-basis: calc((100% - 60px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .gallery-item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-set {
     padding-top: 20px;
@@ -393,12 +391,12 @@ h2 {
 }
 .client-object {
     fill: var(--social-network);
+    transition: border, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-object:hover {
     border: 1px solid var(--brand-color);
     fill: var(--brand-color);
     cursor: pointer;
-    transition: border, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-down {
     font-weight: 700;
@@ -421,12 +419,12 @@ h2 {
     fill: var(--main-white);
     padding-top: 12px;
     padding-left: 12px;
+    transition: background-color, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-network-down:hover {
     background-color: var(--brand-color);
     fill: var(--main-white);
     cursor: pointer;
-    transition: background-color, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .decoration-cards {
     position: relative;
@@ -503,6 +501,10 @@ h2 {
     left: 0;
     top: 0;
     background-color: var(--backdrop);
+    scale: 1;
+    transition-property: scale;
+    transition-duration: 2s;
+    transition-timing-function: ease;
 }
 .box {
     position: absolute;
@@ -514,7 +516,6 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    animation: modal 2s;
 }
 .btn-icon {
     position: absolute;
@@ -538,12 +539,5 @@ h2 {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-}
-@keyframes modal {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
-    }
+    scale: 0;
 }
