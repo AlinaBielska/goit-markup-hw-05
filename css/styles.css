@@ -2,8 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--main-color);
     margin: 0;
-    width: 1600px;
-    box-sizing: border-box;
+    font-size: 14px;
+    letter-spacing: 0.03em;
 }
 :root {
     --main-color: #212121;
@@ -34,9 +34,14 @@ h1 {
 h2 {
     margin: 0;
 }
+h3 {
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
 .container {
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -81,24 +86,17 @@ h2 {
     color: var(--extra-gray);
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     display: inline-block;
     align-items: center;
 }
 .icon-top-contact {
     margin-right: 10px;
-    fill: var(--extra-gray);
+    fill: currentColor;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.icon-top-contact:hover , .icon-top-contact:focus {
-    fill: var(--brand-color);
 }
 .top-contact:hover, .top-contact:focus, .lower-contact:hover, .lower-contact:focus {
     color: var(--brand-color);  
-}
-.top-contact:hover .icon-top-contact {
-    fill: var(--brand-color);
 }
 .color-logo {
     font-family: 'Raleway';
@@ -125,12 +123,9 @@ h2 {
     padding-top: 60px;
 }
 .background-styling.up {
-    display: flex;
     height: 600px;
-    flex-direction: column;
-    padding: 200px 452px;
-    gap: 30px;
-    align-items: center;
+    margin: 0 auto;
+    padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-picture.jpg);
     max-width: 1600px;
 }
@@ -142,6 +137,8 @@ h2 {
     letter-spacing: 0.06em; 
     text-transform: uppercase;
     color: var(--main-white);
+    width: 696px;
+    margin: 0 auto;
 }
 .lorem-text {
     font-size: 14px;
@@ -200,6 +197,7 @@ h2 {
     margin-top: 16px;
     justify-content: center;
     gap: 10px;
+    padding-left: 0;
 }
 .profession-inner {
     display: block;
@@ -209,7 +207,7 @@ h2 {
     background-color: var(--main-white);
     fill: var(--social-network);
     padding-top: 12px;
-    transition: fill, background-color, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .profession-inner:hover {
     background-color: var(--brand-color);
@@ -245,6 +243,8 @@ h2 {
     border-radius: 4px;
     border: none;
     padding: 10px 42px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 .services {
     font-family: inherit;
@@ -282,13 +282,11 @@ h2 {
     letter-spacing: 0.03em;
     color: var(--main-white);
 }
-.top-contact.phone {
-    /* margin-left: 50px; */
-    margin-left: 30px;
-}
 .top-contact.address {
-    /* margin-left: 371px; */
-    margin-left: 345px;
+    margin-right: 30px;
+}
+.top-right {
+    margin-left: auto;
 }
 .portfolio-nav {
     border-bottom: 1px solid var(--border-nav);
@@ -303,6 +301,7 @@ h2 {
     gap: 20px;
     display: inline-block;
     display: flex;
+    align-items: baseline;
     gap: 70px;
 }
 .section.lorem {
@@ -317,6 +316,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    
 }
 .team {
     display: flex;
@@ -377,6 +377,7 @@ h2 {
     margin-bottom: 50px;
 }
 .client-object {
+    display: flex;
     width: 170px;
     height: 92px;
     border-radius: 4px;
@@ -384,14 +385,14 @@ h2 {
     padding: 16px 32px;
 }
 .client-link {
-    margin-right: 30px; 
-}
-.client-link:nth-of-type(6) {
-    margin-right: 0px;
+    display: flex;
+    display: inline-block;
+    justify-content: space-between;
+    gap: 30px;
 }
 .client-object {
     fill: var(--social-network);
-    transition: border, fill, 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-object:hover {
     border: 1px solid var(--brand-color);
@@ -405,10 +406,13 @@ h2 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-white);
+    margin: 0;
+    margin-bottom: 20px;
 }
 .social-network-down-wrapper {
     display: flex;
     gap: 10px;
+    padding-left: 0;
 }
 .social-network-down {
     display: block;
@@ -441,10 +445,10 @@ h2 {
     padding-top: 49px;
     padding-left: 24px;
     padding-right: 45px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .reset-margin:hover .decoration-overlay {
     transform: translateY(0);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-overlay {
     font-size: 18px;
@@ -461,19 +465,17 @@ h2 {
 .text-description {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-
     font-weight: 700;
-    font-size: 14px;
     line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-white);
-    padding: 27px 90px;
     margin: 0;
     background-color: var(--black-transparent);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .navigation.one, .navigation.two {
     color: var(--brand-color);
@@ -502,8 +504,10 @@ h2 {
     top: 0;
     background-color: var(--backdrop);
     scale: 1;
-    transition-property: scale;
-    transition-duration: 2s;
+    opacity: 1;
+    visibility: visible;
+    transition-property: scale, opacity, visibility;
+    transition-duration: 250ms;
     transition-timing-function: ease;
 }
 .box {
