@@ -1,5 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--main-white);
     color: var(--main-color);
     margin: 0;
     font-size: 14px;
@@ -87,7 +88,7 @@ li {
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
-    display: inline-block;
+    display: flex;
     align-items: center;
 }
 .icon-top-contact {
@@ -128,6 +129,8 @@ li {
     padding: 200px 0;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background-picture.jpg);
     max-width: 1600px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .main-slogan {
     font-weight: 900;
@@ -287,6 +290,7 @@ li {
 }
 .top-right {
     margin-left: auto;
+    display: flex;
 }
 .portfolio-nav {
     border-bottom: 1px solid var(--border-nav);
@@ -378,26 +382,23 @@ li {
 }
 .client-object {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 170px;
     height: 92px;
     border-radius: 4px;
-    border: 1px solid var(--social-network);
-    padding: 16px 32px;
-}
-.client-link {
-    display: flex;
-    display: inline-block;
-    justify-content: space-between;
-    gap: 30px;
-}
-.client-object {
-    fill: var(--social-network);
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--social-network);
+    fill: currentColor;
+    border: 1px solid currentColor;
+}
+.client-link-wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 0;
 }
 .client-object:hover {
-    border: 1px solid var(--brand-color);
-    fill: var(--brand-color);
-    cursor: pointer;
+    color: var(--brand-color);
 }
 .text-down {
     font-weight: 700;
